@@ -60,19 +60,23 @@
 <!-- MENU BUTTON -->
 
 <button
+  *ngIf="!sidebarOpen"
   (click)="toggleSidebar()"
-  class="fixed top-6 right-6
+
+  class="fixed top-6 left-6
          w-14 h-14 rounded-2xl
          bg-[#0b1120]/80
          backdrop-blur-xl
          border border-cyan-500/20
          text-cyan-300 text-2xl
-         z-[9999]
+         z-[2000]
          hover:border-cyan-400
          hover:text-cyan-200
          hover:shadow-[0_0_25px_rgba(0,255,255,0.15)]
          transition duration-300
-         flex items-center justify-center">
+         flex items-center justify-center
+         cursor-pointer
+         select-none">
 
   ☰
 
@@ -106,7 +110,7 @@
          bg-[#050816]/95
          backdrop-blur-xl
          border-r border-cyan-500/20
-         z-[1000]
+         z-[3000]
          transition duration-500
          p-5 md:p-8">
 
