@@ -1,0 +1,96 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* INITIAL HIDDEN STATE */
+
+.fade-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+.fade-up {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes smoothBlink {
+
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+}
+
+.cursor-blink {
+
+  animation: blink 1s infinite;
+
+}
+
+@keyframes blink {
+
+  0%, 50% {
+    opacity: 1;
+  }
+
+  51%, 100% {
+    opacity: 0;
+  }
+
+}
+.role-fade {
+
+  animation: roleFade 0.8s ease;
+
+}
+
+@keyframes roleFade {
+
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
